@@ -1,0 +1,77 @@
+{
+  "name": "profile",
+  "base": "User",
+  "idInjection": true,
+  "options": {
+    "validateUpsert": false
+  },
+  "properties": {
+    "username":{
+      "type":"string"
+    },
+    "password": {
+      "type": "string"
+    },
+    "phone": {
+      "type": "string"
+    },
+    "usertype": {
+      "type": "string"
+    }
+  },
+  "hidden": [
+    "createdAt",
+    "updatedAt"
+  ],
+  "validations": [],
+  "relations": {},
+  "acls": [
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "signup"
+    },
+    {
+      "accessType": "*",
+      "principalType": "ROLE",
+      "principalId": "$authenticated",
+      "permission": "ALLOW",
+      "property": "info"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "signin"
+    },
+    {
+      "accessType": "EXECUTE",
+      "principalType": "ROLE",
+      "principalId": "$everyone",
+      "permission": "ALLOW",
+      "property": "create"
+    }
+  ],
+  "methods": {},
+  "mixins": {
+    "FireLoop": true,
+    "TimeStamp": {
+      "required": false
+    },
+    "Stats": [
+      {
+        "method": "stats",
+        "endpoint": "/stats",
+        "description": "Statistical information for user registers.",
+        "type": "model",
+        "count": {
+          "on": "createdAt",
+          "by": "index"
+        }
+      }
+    ]
+  }
+}

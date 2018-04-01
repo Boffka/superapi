@@ -1,0 +1,11 @@
+{
+  "db": {
+    "name": "db",
+    "connector": "memory"
+  },
+  "mongodb": {
+    "url": "mongodb://superuser:123123@ds229909.mlab.com:29909/superapi",
+    "name": "mongodb",
+    "connector": "loopback-connector-mongodb"
+  }
+}

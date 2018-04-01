@@ -1,0 +1,13 @@
+{
+  "name": "superapi",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "setup": "cd fireloop/ && npm install",
+    "start": "cd fireloop/ && node server/server.js"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "MIT"
+}
