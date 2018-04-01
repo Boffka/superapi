@@ -53,7 +53,7 @@ The token is returned in the format:
 }
 ```
 
-## Api Url
+## API Url
 
 ```
 http://localhost:3000/api/v1
@@ -110,7 +110,7 @@ Returns:
 }
 ``` 
 
-##todo
+## todo
 - Username sanitize
 - Tests
 - Handle Errors
